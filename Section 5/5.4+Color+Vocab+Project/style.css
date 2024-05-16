@@ -17,7 +17,7 @@ h2#green{
 h2#yellow{
     color: yellow;
 }
-h2[id]{
+.color-title{
     font-weight: bolder;
     font-style: italic;
 }
