@@ -1,44 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="en" style="--bulma-primary: hsl(0, 99%, 69%)">
+    <head id="head">
         <meta charset="UTF-8">
         <title>My Resume</title>
     </head>
-    <body>
+    <body class="has-text-justified">
         <!-- DONE 1: Create the HTML Boilerplate -->
-        <h1>Ezequiel's portfolio</h1>
-        <h2>I'm NOT a web developer</h2>
-        <h3>I intend to become the best developer to have ever graced this earth</h3>
+        <h1 class="title has-text-centered">Ezequiel's portfolio</h1>
+        <h2 class="subtitle pl-3">I'm NOT a web developer</h2>
+        <h3 class="subtitle pl-3">I intend to become the best developer to have ever graced this earth</h3>
         <hr>
-        <ul>
+        <div class="is-align-items-center has-text-centered">
+            <button class="button is-primary" onclick="toggleCSS()">Toggle CSS</button>
+        </div>
+        <ul class="pl-5">
             <li>
-                <h4>Education:</h4>
-                <ul>
+                <h4 class="subtitle is-underlined is-bold mb-1">Education:</h4>
+                <ul class="pl-5 mb-4">
                     <li>
-                        <h5>ORT Argentina</h5>
+                        <h5 class="is-underlined">ORT Argentina</h5>
                         <h6>
                             High School (2014 - 2020)
                         </h6>
                     </li>
                     <li>
-                        <h5>Davinci Primera Escuela de Arte Multimedial</h5>
+                        <h5 class="is-underlined">Davinci Primera Escuela de Arte Multimedial</h5>
                         <h6>
                             Tertiary (2021 - Present)
                         </h6>
                     </li>
                 </ul>
             </li>
+
             <li>
-                <h4>Work Experience:</h4>
-                <ul>
+                <h4 class="subtitle is-underlined is-bold mb-1">Work Experience:</h4>
+                <ul class="pl-5 mb-4">
                     <li>
-                        <h5>Raw iGaming</h5>
+                        <h5 class="is-underlined">Raw iGaming</h5>
                         <h6>
                             QA Tester / DevOps Engineer (2021 - 2023)
                         </h6>
                     </li>
                     <li>
-                        <h5>Presis Consultores</h5>
+                        <h5 class="is-underlined">Presis Consultores</h5>
                         <h6>
                             SysOps / DevOps (2023 - Present)
                         </h6>
@@ -49,8 +53,23 @@
         <hr>
 <!--        <a href="public/contact.html">Contact Me</a>-->
 <!--        <a href="public/about.html">About Me</a><a href="public/about.html">About Me</a>-->
+        <script>
+            let toggled = false
+            let baseHead = document.getElementById("head").innerHTML
+            function toggleCSS() {
+                toggled = !toggled
+                if (toggled){
+                    document.getElementById("head").innerHTML +=
+                        '\n <link rel="stylesheet"' +
+                        ' href="/assets/css/bulma.css" />'
+                }
+                else{
+                    document.getElementById('head').innerHTML = baseHead
+                }
+            }
+        </script>
     </body>
-<footer>
+<footer class="has-text-centered">
     <address>
         Email: <a href="mailto:ezequiel@oyhambure.com">ezequiel@oyhambure.com</a>
     </address>
