@@ -10,6 +10,7 @@
       padding: 0;
       margin: 0;
       font-weight: 700;
+      flex-grow:3;
     }
 
     li {
@@ -19,6 +20,14 @@
     .container {
       padding: 10px;
       background-color: gold;
+      display: flex;
+      gap: 2rem;
+    }
+    .container > li {
+      float: right;
+    }
+    .container > *{
+      display: inline;
     }
 
   </style>
