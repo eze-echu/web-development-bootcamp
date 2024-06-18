@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Flexbox Pricing Table</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,9 +12,61 @@
       body {
         font-family: "Sono", sans-serif;
       }
+      .pricing-container {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+      }
+      .pricing-plan {
+        flex: 1;
+        background-color: lightgray;
+        border-radius: 5px;
+        margin: 5px;
+        text-align: center;
+        max-width: 350px;
+      }
+      .plan-title{
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-top: 5px;
+      }
+      .plan-price {
+        font-size: xx-large;
+        font-weight: bold;
+      }
+      .plan-features {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      .plan-button {
+        margin-bottom: 10px;
+        background-color: orangered;
+        padding: 5px;
+        border-radius: 5px;
+        color: whitesmoke;
+        outline: none;
+        border: none;
+      }
 
       /* Hint: What can you do with a media query and flexbox? */
       @media (max-width: 1250px) {
+        .pricing-container {
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .pricing-plan{
+          justify-content: center;
+          align-self: center;
+          max-width: max-content;
+          min-width: 300px;
+          padding: 10px;
+        }
       }
     </style>
   </head>
